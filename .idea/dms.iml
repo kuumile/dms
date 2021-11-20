@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="atunwa" />
+    <orderEntry type="module" module-name="techskills" />
+    <orderEntry type="module" module-name="hostel" />
+    <orderEntry type="module" module-name="exams" />
+    <orderEntry type="module" module-name="pharmacy" />
+    <orderEntry type="module" module-name="bastic" />
+    <orderEntry type="module" module-name="bulksms" />
+    <orderEntry type="module" module-name="zenoph.notify" />
+    <orderEntry type="module" module-name="tv" />
+  </component>
+</module>

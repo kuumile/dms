@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Document Management System</title>
+		<meta name="description" content="Document Management System">
+		<meta name="author" content="Aloval IT Solutions Web Development">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Switchery css -->
+    <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
+
+		<!-- Bootstrap CSS -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Font Awesome CSS -->
+		<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+		
+		<!-- Custom CSS -->
+		<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- BEGIN CSS for this page -->
+    <link href="assets/plugins/jstree/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/plugins/confirm/css/jquery-confirm.css">
+		
+		<!-- BEGIN CSS for this page -->
+		<link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/plugins/sweetalert/sweetalert.css"/>
+		<!-- END CSS for this page -->
+		
+</head>
+
+<body class="adminbody">
+
+<div id="main">
+
+	<!-- top bar navigation -->
+	<div class="headerbar">
+
+		<!-- LOGO -->
+        <div class="headerbar-left">
+			<a href="dashboard.html" class="logo"><img alt="Logo" src="assets/images/logo.png" /> <span>Admin</span></a>
+        </div>
+
+        <nav class="navbar-custom">
+
+                    <ul class="list-inline float-right mb-0">
+                        <li class="list-inline-item notif"><a class="nav-link"><span id="status" class="small"></span></a></li>
+						
+						<li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-question-circle"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small>Help and Support</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a target="_blank" href="https://www.pikeadmin.com" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Do you want custom development to integrate this theme?</b>
+                                        <span>Contact Us</span>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a target="_blank" href="https://www.pikeadmin.com/pike-admin-pro" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Do you want PHP version of the theme that save dozens of hours of work?</b>
+                                        <span>Try Pike Admin PRO</span>
+                                    </p>
+                                </a>                               
+
+                                <!-- All-->
+                                <a title="Clcik to visit Pike Admin Website" target="_blank" href="https://www.pikeadmin.com" class="dropdown-item notify-item notify-all">
+                                    <i class="fa fa-link"></i> Visit Pike Admin Website
+                                </a>
+
+                            </div>
+                        </li>
+						
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <i class="fa fa-fw fa-envelope-o"></i><span class="notif-bullet"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-arrow-success dropdown-lg">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5><small><span class="label label-danger pull-xs-right">12</span>Contact Messages</small></h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Jokn Doe</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">2 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Michael Jackson</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">15 minutes ago</small>
+                                    </p>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">                                    
+                                    <p class="notify-details ml-0">
+                                        <b>Foxy Johnes</b>
+                                        <span>New message received</span>
+                                        <small class="text-muted">Yesterday, 13:30</small>
+                                    </p>
+                                </a>
+
+                                <!-- All-->
+                                <a href="#" class="dropdown-item notify-item notify-all">
+                                    View All
+                                </a>
+
+                            </div>
+                        </li>
+                        
+
+
+                        <li class="list-inline-item dropdown notif">
+                            <a class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" id="userimage">
+                                <!-- User Image goes here--->
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                <!-- item-->
+                                <div class="dropdown-item noti-title">
+                                    <h5 class="text-overflow"><small id="welcomeuser"></small> </h5>
+                                </div>
+
+                                <!-- item-->
+                                <a href="pro-profile.html" class="dropdown-item notify-item">
+                                    <i class="fa fa-user"></i> <span>Profile</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="#" class="dropdown-item notify-item">
+                                    <i class="fa fa-power-off"></i> <span>Logout</span>
+                                </a>
+								
+								<!-- item-->
+                                <a target="_blank" href="https://www.pikeadmin.com" class="dropdown-item notify-item">
+                                    <i class="fa fa-external-link"></i> <span>Pike Admin</span>
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <ul class="list-inline menu-left mb-0">
+                        <li class="float-left">
+                            <button class="button-menu-mobile open-left">
+								<i class="fa fa-fw fa-bars"></i>
+                            </button>
+                        </li>                        
+                    </ul>
+
+        </nav>
+
+	</div>
+	<!-- End Navigation -->
+	
+ 
+	<!-- Left Sidebar -->
+	<div class="left main-sidebar">
+	
+		<div class="sidebar-inner leftscroll">
+
+			<div id="sidebar-menu">
+        
+			<ul>
+
+					<li class="submenu">
+						<a class="active" href="dashboard"><i class="fa fa-fw fa-bars"></i><span> Dashboard </span> </a>
+                    </li>
+
+					<li class="submenu">
+                        <a href="folderfile"><i class="fa fa-fw fa-folder"></i><span> Folder/Files Directory </span><span class="menu-arrow"></span> </a>
+                        <ul class="list-unstyled">
+                            <li><a href="createfolder"><span>Create Folder</span></a></li>
+                            <li><a href="createfile"><span>Add Document</span></a></li>
+                        </ul>
+                    </li>
+
+					<li class="submenu">
+                        <a href="permission"><i class="fa fa-fw fa-key"></i><span> Roles/Permission </span> </a>
+                    </li>
+
+					<li class="submenu">
+                        <a href="company"><i class="fa fa-fw fa-institution"></i><span> Company/Institution </span> </a>
+                    </li>
+
+					<li class="submenu">
+                        <a href="account"><i class="fa fa-fw fa-user-secret"></i><span> User Account </span> </a>
+                    </li>
+					
+					
+					
+					
+                  
+					
+            </ul>
+
+            <div class="clearfix"></div>
+
+			</div>
+        
+			<div class="clearfix"></div>
+
+		</div>
+
+	</div>
+	<!-- End Sidebar -->
+
+
+    <div class="content-page">
+	
+		<!-- Start content -->
+        <div class="content">
+            
+			<div class="container-fluid" id="content">
+					
+											
+            </div>
+			<!-- END container-fluid -->
+
+		</div>
+		<!-- END content -->
+
+    </div>
+	<!-- END content-page -->
+    
+	<footer class="footer">
+		<span class="text-right">
+		Copyright <a target="_blank" href="#">Document Management System</a>
+		</span>
+		<span class="float-right">
+		Powered by <a target="_blank" href="#"><b>Aloval IT Solutions</b></a>
+		</span>
+	</footer>
+
+</div>
+<!-- END main -->
+
+<script src="assets/js/modernizr.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/moment.min.js"></script>
+		
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+
+<script src="assets/js/detect.js"></script>
+<script src="assets/js/fastclick.js"></script>
+<script src="assets/js/jquery.blockUI.js"></script>
+<script src="assets/js/jquery.nicescroll.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/plugins/switchery/switchery.min.js"></script>
+<!-- BEGIN Java Script for this page -->
+<script src="assets/plugins/jstree/jstree.min.js"></script>
+<!-- Project Main Files JS--->
+<script src="query/navigation.js"></script>
+
+
+<!-- Project Sub Query Files JS--->
+<script src="sub_query/useraccount.js"></script>
+
+
+<!-- App js -->
+<script src="assets/js/pikeadmin.js"></script>
+
+
+
+
+<!-- BEGIN Java Script for this page -->
+	<script src="assets/js/Chart.min.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js"></script>
+	<script src="assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/plugins/sweetalert/sweetalert.js"></script>
+    <script src="assets/plugins/confirm/js/jquery-confirm.js"></script>
+	<!-- Counter-Up-->
+	<script src="assets/plugins/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="assets/plugins/counterup/jquery.counterup.min.js"></script>			
+    <script src="logged/logged.js"></script>
+	<script>
+
+		$(document).ready(function() {
+			// data-tables
+			$('#example1').DataTable();
+					
+			// counter-up
+			$('.counter').counterUp({
+				delay: 10,
+				time: 600
+			});
+
+
+            // Basic
+            $('#simpleTree').jstree({
+                'core' : {
+                    'themes' : {
+                        'responsive': false
+                    }
+                },
+                'types' : {
+                    'default' : {
+                        'icon' : 'fa fa-folder-open'
+                    },
+                    'file' : {
+                        'icon' : 'fa fa-file'
+                    }
+                },
+                'plugins' : ['types']
+            });
+
+
+		} );		
+	</script>
+<script>
+    $( document ).ready(function() {
+        // Basic
+        $('#simpleTree').jstree({
+            'core' : {
+                'themes' : {
+                    'responsive': false
+                }
+            },
+            'types' : {
+                'default' : {
+                    'icon' : 'fa fa-folder-open'
+                },
+                'file' : {
+                    'icon' : 'fa fa-file'
+                }
+            },
+            'plugins' : ['types']
+        });
+
+        // Checkbox
+        $('#checkboxesTree').jstree({
+            'core' : {
+                'themes' : {
+                    'responsive': false
+                }
+            },
+            'types' : {
+                'default' : {
+                    'icon' : 'fa fa-folder'
+                },
+                'file' : {
+                    'icon' : 'fa fa-file'
+                }
+            },
+            'plugins' : ['types', 'checkbox']
+        });
+
+        //Drag & Drop
+        $('#dragdropTree').jstree({
+            'core' : {
+                'check_callback' : true,
+                'themes' : {
+                    'responsive': false
+                }
+            },
+            'types' : {
+                'default' : {
+                    'icon' : 'fa fa-folder'
+                },
+                'file' : {
+                    'icon' : 'fa fa-file'
+                }
+            },
+            'plugins' : ['types', 'dnd']
+        });
+
+    });
+</script>
+	<script>
+        $(document).ready(function () {
+            setInterval(async () => {
+                const statusDisplay = document.getElementById("status");
+                var isOnLine = navigator.onLine;
+                if (isOnLine) {
+                    statusDisplay.innerHTML = "<span class='text-primary badge badge-light'>Online</span>";
+                    console.log(statusDisplay);
+                } else {
+                    statusDisplay.innerHTML = "<span class='text-danger badge badge-light'>Offline</span>";
+                    console.log(statusDisplay);
+                }
+            }, 3000); // probably too often, try 30000 for every 30 seconds
+        })
+	</script>
+<!-- END Java Script for this page -->
+
+</body>
+</html>

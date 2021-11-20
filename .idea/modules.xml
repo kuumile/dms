@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../atunwa/.idea/atunwa.iml" filepath="$PROJECT_DIR$/../atunwa/.idea/atunwa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bastic/.idea/bastic.iml" filepath="$PROJECT_DIR$/../bastic/.idea/bastic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bulksms/.idea/bulksms.iml" filepath="$PROJECT_DIR$/../bulksms/.idea/bulksms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dms.iml" filepath="$PROJECT_DIR$/.idea/dms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../exams/.idea/exams.iml" filepath="$PROJECT_DIR$/../exams/.idea/exams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../hostel/.idea/hostel.iml" filepath="$PROJECT_DIR$/../hostel/.idea/hostel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pharmacy/.idea/pharmacy.iml" filepath="$PROJECT_DIR$/../pharmacy/.idea/pharmacy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../techskills/.idea/techskills.iml" filepath="$PROJECT_DIR$/../techskills/.idea/techskills.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tv/.idea/tv.iml" filepath="$PROJECT_DIR$/../tv/.idea/tv.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../zenoph.notify/.idea/zenoph.notify.iml" filepath="$PROJECT_DIR$/../zenoph.notify/.idea/zenoph.notify.iml" />
+    </modules>
+  </component>
+</project>
